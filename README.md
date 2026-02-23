@@ -46,10 +46,11 @@ This is a comprehensive market news monitoring tool designed to automatically sc
 2. **Windows PowerShell**: Available on all modern Windows systems
 
 ### Setup Steps
+Make sure to replace [Your Work Folder] with the full path of your work folder in all files in this repo!!
 
 1. **Install Dependencies**:
    ```powershell
-   cd C:\Users\zhiyu\Documents\Innovation\Programming\VSCodeProjects\MarketMonitor
+   cd [Your Work Folder]\MarketMonitor
    pip install -r requirements.txt
    ```
 
@@ -78,7 +79,7 @@ PowerShell -ExecutionPolicy Bypass -File setup_scheduler.ps1 -Run
 
 Or directly:
 ```powershell
-cd C:\Users\zhiyu\Documents\Innovation\Programming\VSCodeProjects\MarketMonitor
+cd [Your Work Folder]\MarketMonitor
 python market_news_monitor.py
 ```
 
@@ -93,7 +94,7 @@ To see the scheduled task in Windows Task Scheduler:
 ### Access Reports
 Reports are saved to:
 ```
-C:\Users\zhiyu\Documents\Innovation\Programming\VSCodeProjects\MarketMonitor\output\
+[Your Work Folder]\MarketMonitor\output\
 ```
 
 File naming format: `banking_news_YYYY-MM-DD_HH-MM-SS.txt`
@@ -181,7 +182,7 @@ For enhanced news gathering, you can use NewsAPI.org (requires free registration
 
 1. Verify output folder exists:
    ```powershell
-   Test-Path "C:\Users\zhiyu\Documents\Innovation\Programming\VSCodeProjects\MarketMonitor\output"
+   Test-Path "[Your Work Folder]\MarketMonitor\output"
    ```
 
 2. Check folder permissions - Windows account needs write access
@@ -252,7 +253,7 @@ If you prefer to set up the scheduled task manually:
 7. Set:
    - **Program/script**: python.exe (full path)
    - **Add arguments**: market_news_monitor.py
-   - **Start in**: C:\Users\zhiyu\Documents\Innovation\Programming\VSCodeProjects\MarketMonitor
+   - **Start in**: [Your Work Folder]\MarketMonitor
 8. Complete the wizard
 
 ## Support
@@ -263,7 +264,7 @@ For issues or questions:
 2. Review error messages in Task Scheduler History
 3. Run the tool manually to see detailed output:
    ```powershell
-   python C:\Users\zhiyu\Documents\Innovation\Programming\VSCodeProjects\MarketMonitor\market_news_monitor.py
+   python [Your Work Folder]\MarketMonitor\market_news_monitor.py
    ```
 
 ## License

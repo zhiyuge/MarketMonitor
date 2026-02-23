@@ -11,7 +11,7 @@
 
 ### Step 1: Install Python Dependencies
 ```powershell
-cd C:\Users\zhiyu\Documents\Innovation\Programming\VSCodeProjects\MarketMonitor
+cd [Your Work Folder]\MarketMonitor
 pip install -r requirements.txt
 ```
 
@@ -44,7 +44,7 @@ If Python is not found:
 Navigate to the project directory and install required packages:
 
 ```powershell
-cd C:\Users\zhiyu\Documents\Innovation\Programming\VSCodeProjects\MarketMonitor
+cd [Your Work Folder]\MarketMonitor
 pip install -r requirements.txt
 ```
 
@@ -138,7 +138,7 @@ python market_news_monitor.py
 ### Accessing Reports
 All reports are saved to:
 ```
-C:\Users\zhiyu\Documents\Innovation\Programming\VSCodeProjects\MarketMonitor\output\
+[Your Work Folder]\MarketMonitor\output\
 ```
 
 **File naming format:** `banking_news_YYYY-MM-DD_HH-MM-SS.txt`
@@ -149,7 +149,7 @@ C:\Users\zhiyu\Documents\Innovation\Programming\VSCodeProjects\MarketMonitor\out
 
 To open the most recent report:
 ```powershell
-$latestReport = Get-ChildItem "C:\Users\zhiyu\Documents\Innovation\Programming\VSCodeProjects\MarketMonitor\output" | Sort-Object LastWriteTime -Descending | Select-Object -First 1
+$latestReport = Get-ChildItem "[Your Work Folder]\MarketMonitor\output" | Sort-Object LastWriteTime -Descending | Select-Object -First 1
 Start-Process $latestReport.FullName
 ```
 
@@ -234,7 +234,7 @@ Get-ScheduledTask -TaskName "MarketNewsMonitor"
 1. Check your internet connection
 2. Try running manually to see detailed output:
    ```powershell
-   python C:\Users\zhiyu\Documents\Innovation\Programming\VSCodeProjects\MarketMonitor\market_news_monitor.py
+   python [Your Work Folder]\MarketMonitor\market_news_monitor.py
    ```
 3. News APIs have rate limits on free tiers
 4. Try again after waiting a few minutes
@@ -264,12 +264,12 @@ If reports aren't being saved:
 
 1. Check the output folder exists:
    ```powershell
-   Test-Path "C:\Users\zhiyu\Documents\Innovation\Programming\VSCodeProjects\MarketMonitor\output"
+   Test-Path "[Your Work Folder]\MarketMonitor\output"
    ```
 
 2. If it doesn't exist, create it:
    ```powershell
-   mkdir "C:\Users\zhiyu\Documents\Innovation\Programming\VSCodeProjects\MarketMonitor\output"
+   mkdir "[Your Work Folder]\MarketMonitor\output"
    ```
 
 3. Verify permissions on the folder:
@@ -287,14 +287,14 @@ If reports aren't being saved:
 
 **Weekly:** Check that output files are being created
 ```powershell
-Get-ChildItem "C:\Users\zhiyu\Documents\Innovation\Programming\VSCodeProjects\MarketMonitor\output" | Sort-Object LastWriteTime -Descending | Select-Object Name, LastWriteTime
+Get-ChildItem "[Your Work Folder]\MarketMonitor\output" | Sort-Object LastWriteTime -Descending | Select-Object Name, LastWriteTime
 ```
 
 **Monthly:** Archive old reports (older than 30 days)
 ```powershell
-$archiveDir = "C:\Users\zhiyu\Documents\Innovation\Programming\VSCodeProjects\MarketMonitor\output\Archive"
+$archiveDir = "[Your Work Folder]\MarketMonitor\output\Archive"
 mkdir $archiveDir -Force
-Get-ChildItem "C:\Users\zhiyu\Documents\Innovation\Programming\VSCodeProjects\MarketMonitor\output" -Filter "*.txt" | Where-Object {$_.LastWriteTime -lt (Get-Date).AddDays(-30)} | Move-Item -Destination $archiveDir
+Get-ChildItem "[Your Work Folder]\MarketMonitor\output" -Filter "*.txt" | Where-Object {$_.LastWriteTime -lt (Get-Date).AddDays(-30)} | Move-Item -Destination $archiveDir
 ```
 
 ### Updating Dependencies

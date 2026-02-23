@@ -14,7 +14,7 @@ class BankingNewsMonitor:
     """Monitor and collect negative news on US regional banks"""
     
     def __init__(self):
-        self.output_dir = r"C:\Users\zhiyu\Documents\Innovation\Programming\VSCodeProjects\MarketMonitor\output"
+        self.output_dir = r"[Your Work Folder]\MarketMonitor\output"
         self.ensure_output_dir()
         
         # Regional bank tickers and names to monitor

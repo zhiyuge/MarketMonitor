@@ -15,7 +15,7 @@ The tool:
 2. **Filters for Negative Banking News** - Identifies articles covering adverse developments
 3. **Generates Detailed Reports** - Creates timestamped reports with headlines, summaries, and links
 4. **Runs Automatically** - Executes daily at 8:00 AM via Windows Task Scheduler
-5. **Saves to Designated Folder** - Outputs to `C:\Users\zhiyu\Documents\Innovation\Programming\VSCodeProjects\MarketMonitor\output`
+5. **Saves to Designated Folder** - Outputs to `[Your Work Folder]\MarketMonitor\output`
 
 ---
 
@@ -42,7 +42,7 @@ MarketMonitor/
 
 ### Step 1: Install Dependencies
 ```powershell
-cd C:\Users\zhiyu\Documents\Innovation\Programming\VSCodeProjects\MarketMonitor
+cd [Your Work Folder]\MarketMonitor
 pip install -r requirements.txt
 ```
 
@@ -227,13 +227,13 @@ PowerShell -ExecutionPolicy Bypass -File setup_scheduler.ps1 -Run
 
 ### View Latest Report
 ```powershell
-$latestReport = Get-ChildItem "C:\Users\zhiyu\Documents\Innovation\Programming\VSCodeProjects\MarketMonitor\output" | Sort-Object LastWriteTime -Descending | Select-Object -First 1
+$latestReport = Get-ChildItem "[Your Work Folder]\MarketMonitor\output" | Sort-Object LastWriteTime -Descending | Select-Object -First 1
 Start-Process $latestReport.FullName
 ```
 
 ### List All Reports
 ```powershell
-Get-ChildItem "C:\Users\zhiyu\Documents\Innovation\Programming\VSCodeProjects\MarketMonitor\output" | Select-Object Name, LastWriteTime
+Get-ChildItem "[Your Work Folder]\MarketMonitor\output" | Select-Object Name, LastWriteTime
 ```
 
 ### View Scheduled Task Details
@@ -367,7 +367,7 @@ The tool searches for 40+ keywords related to:
 ## Next Steps After Installation
 
 1. **Verify Installation:** Run `PowerShell -ExecutionPolicy Bypass -File setup_scheduler.ps1 -Run`
-2. **Check Output:** Open `C:\Users\zhiyu\Documents\Innovation\Programming\VSCodeProjects\MarketMonitor\output`
+2. **Check Output:** Open `[Your Work Folder]\MarketMonitor\output`
 3. **Confirm Scheduling:** Open Task Scheduler and find "MarketNewsMonitor"
 4. **Check Tomorrow:** Verify the tool ran at 8:00 AM by checking for new reports
 5. **Optional Customization:** Edit `market_news_monitor.py` to add banks or keywords
@@ -393,7 +393,7 @@ The tool searches for 40+ keywords related to:
 - News APIs have rate limits
 
 **Output Folder Issues**
-- Verify folder exists: `C:\Users\zhiyu\Documents\Innovation\Programming\VSCodeProjects\MarketMonitor\output`
+- Verify folder exists: `[Your Work Folder]\MarketMonitor\output`
 - Check folder permissions (needs write access)
 
 **See INSTALLATION_GUIDE.md for more troubleshooting.**

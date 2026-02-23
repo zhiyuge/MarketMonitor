@@ -5,7 +5,7 @@ REM This script runs the Python market monitoring tool
 setlocal enabledelayedexpansion
 
 REM Set the project directory
-set PROJECT_DIR=C:\Users\zhiyu\Documents\Innovation\Programming\VSCodeProjects\MarketMonitor
+set PROJECT_DIR=[Your Work Folder]\MarketMonitor
 
 REM Change to project directory
 cd /d "%PROJECT_DIR%"

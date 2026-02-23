@@ -8,7 +8,7 @@ param(
     [switch]$Help
 )
 
-$ProjectDir = "C:\Users\zhiyu\Documents\Innovation\Programming\VSCodeProjects\MarketMonitor"
+$ProjectDir = "[Your Work Folder]\MarketMonitor"
 $TaskName = "MarketNewsMonitor"
 $TaskDescription = "Daily US Regional Banking Sector Negative News Monitoring"
 $ScriptPath = Join-Path $ProjectDir "market_news_monitor.py"

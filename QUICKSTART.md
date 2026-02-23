@@ -5,7 +5,7 @@
 ### Step 1: Install Python Dependencies
 Open PowerShell and run:
 ```powershell
-cd C:\Users\zhiyu\Documents\Innovation\Programming\VSCodeProjects\MarketMonitor
+cd [Your Work Folder]\MarketMonitor
 pip install -r requirements.txt
 ```
 
@@ -34,7 +34,7 @@ PowerShell -ExecutionPolicy Bypass -File setup_scheduler.ps1 -Run
 Press `Windows + R`, type `taskschd.msc`, press Enter. Look for "MarketNewsMonitor"
 
 **Check output reports:**
-Open: `C:\Users\zhiyu\Documents\Innovation\Programming\VSCodeProjects\MarketMonitor\output`
+Open: `[Your Work Folder]\MarketMonitor\output`
 
 **Uninstall the scheduled task:**
 ```powershell
@@ -57,7 +57,7 @@ PowerShell -ExecutionPolicy Bypass -File setup_scheduler.ps1 -Uninstall
 
 Reports are saved in:
 ```
-C:\Users\zhiyu\Documents\Innovation\Programming\VSCodeProjects\MarketMonitor\output\
+[Your Work Folder]\MarketMonitor\output\
 ```
 
 Each report is named: `banking_news_YYYY-MM-DD_HH-MM-SS.txt`

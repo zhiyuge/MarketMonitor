@@ -117,7 +117,7 @@ Success Rate:                     100%
 
 **Step 1: Install Python dependencies**
 ```powershell
-cd C:\Users\zhiyu\Documents\Innovation\Programming\VSCodeProjects\MarketMonitor
+cd [Your Work Folder]\MarketMonitor
 pip install -r requirements.txt
 ```
 
@@ -144,7 +144,7 @@ Once installed, the tool runs automatically at 8:00 AM every day with no manual 
 ### Output Location
 Reports are saved to:
 ```
-C:\Users\zhiyu\Documents\Innovation\Programming\VSCodeProjects\MarketMonitor\output\
+[Your Work Folder]\MarketMonitor\output\
 ```
 
 ### Report Format
@@ -360,13 +360,13 @@ PowerShell -ExecutionPolicy Bypass -File setup_scheduler.ps1 -Uninstall
 
 **View Latest Report:**
 ```powershell
-$latestReport = Get-ChildItem "C:\Users\zhiyu\Documents\Innovation\Programming\VSCodeProjects\MarketMonitor\output" | Sort-Object LastWriteTime -Descending | Select-Object -First 1
+$latestReport = Get-ChildItem "[Your Work Folder]\MarketMonitor\output" | Sort-Object LastWriteTime -Descending | Select-Object -First 1
 Start-Process $latestReport.FullName
 ```
 
 **List All Reports:**
 ```powershell
-Get-ChildItem "C:\Users\zhiyu\Documents\Innovation\Programming\VSCodeProjects\MarketMonitor\output"
+Get-ChildItem "[Your Work Folder]\MarketMonitor\output"
 ```
 
 ---
@@ -375,7 +375,7 @@ Get-ChildItem "C:\Users\zhiyu\Documents\Innovation\Programming\VSCodeProjects\Ma
 
 1. **Install Python dependencies:**
    ```powershell
-   cd C:\Users\zhiyu\Documents\Innovation\Programming\VSCodeProjects\MarketMonitor
+   cd [Your Work Folder]\MarketMonitor
    pip install -r requirements.txt
    ```
 
@@ -390,7 +390,7 @@ Get-ChildItem "C:\Users\zhiyu\Documents\Innovation\Programming\VSCodeProjects\Ma
    ```
 
 4. **Verify results:**
-   Open `C:\Users\zhiyu\Documents\Innovation\Programming\VSCodeProjects\MarketMonitor\output`
+   Open `[Your Work Folder]\MarketMonitor\output`
 
 5. **Optional customization:**
    Edit `market_news_monitor.py` to add/remove banks or keywords

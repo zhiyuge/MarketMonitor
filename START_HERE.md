@@ -13,7 +13,7 @@ This is your **Market News Monitoring Tool** - an automated system that scans th
 1. Open PowerShell
 2. Run these commands:
    ```powershell
-   cd C:\Users\zhiyu\Documents\Innovation\Programming\VSCodeProjects\MarketMonitor
+   cd [Your Work Folder]\MarketMonitor
    pip install -r requirements.txt
    PowerShell -ExecutionPolicy Bypass -File setup_scheduler.ps1 -Install
    ```
@@ -99,7 +99,7 @@ MarketMonitor/
 
 ### Step 1: Install Dependencies
 ```powershell
-cd C:\Users\zhiyu\Documents\Innovation\Programming\VSCodeProjects\MarketMonitor
+cd [Your Work Folder]\MarketMonitor
 pip install -r requirements.txt
 ```
 
@@ -121,12 +121,12 @@ Done! 🎉
 
 **Reports are saved to:**
 ```
-C:\Users\zhiyu\Documents\Innovation\Programming\VSCodeProjects\MarketMonitor\output\
+[Your Work Folder]\MarketMonitor\output\
 ```
 
 **To view the latest report:**
 ```powershell
-$latestReport = Get-ChildItem "C:\Users\zhiyu\Documents\Innovation\Programming\VSCodeProjects\MarketMonitor\output" | Sort-Object LastWriteTime -Descending | Select-Object -First 1
+$latestReport = Get-ChildItem "[Your Work Folder]\MarketMonitor\output" | Sort-Object LastWriteTime -Descending | Select-Object -First 1
 Start-Process $latestReport.FullName
 ```
 
@@ -161,7 +161,7 @@ python market_news_monitor.py
 
 ### Q: Where are the reports saved?
 ```
-C:\Users\zhiyu\Documents\Innovation\Programming\VSCodeProjects\MarketMonitor\output\
+[Your Work Folder]\MarketMonitor\output\
 ```
 
 ---
@@ -192,7 +192,7 @@ Get-ScheduledTask -TaskName "MarketNewsMonitor"
 
 **List all reports:**
 ```powershell
-Get-ChildItem "C:\Users\zhiyu\Documents\Innovation\Programming\VSCodeProjects\MarketMonitor\output" | Sort-Object LastWriteTime -Descending
+Get-ChildItem "[Your Work Folder]\MarketMonitor\output" | Sort-Object LastWriteTime -Descending
 ```
 
 **Uninstall scheduler:**
@@ -202,7 +202,7 @@ PowerShell -ExecutionPolicy Bypass -File setup_scheduler.ps1 -Uninstall
 
 **Run directly without scheduler:**
 ```powershell
-cd C:\Users\zhiyu\Documents\Innovation\Programming\VSCodeProjects\MarketMonitor
+cd [Your Work Folder]\MarketMonitor
 python market_news_monitor.py
 ```
 
@@ -290,7 +290,7 @@ python market_news_monitor.py
 
 ```powershell
 # 1. Install dependencies (1 minute)
-cd C:\Users\zhiyu\Documents\Innovation\Programming\VSCodeProjects\MarketMonitor
+cd [Your Work Folder]\MarketMonitor
 pip install -r requirements.txt
 
 # 2. Create scheduler (1 minute)
@@ -300,7 +300,7 @@ PowerShell -ExecutionPolicy Bypass -File setup_scheduler.ps1 -Install
 PowerShell -ExecutionPolicy Bypass -File setup_scheduler.ps1 -Run
 
 # 4. Check results
-# Open: C:\Users\zhiyu\Documents\Innovation\Programming\VSCodeProjects\MarketMonitor\output
+# Open: [Your Work Folder]\MarketMonitor\output
 ```
 
 **Total time: 5 minutes**
@@ -318,7 +318,7 @@ PowerShell -ExecutionPolicy Bypass -File setup_scheduler.ps1 -Run
 | Source attribution | ✓ Included |
 | Direct article links | ✓ Included |
 | Daily timestamped reports | ✓ Enabled |
-| Organized output folder | ✓ C:\Users\zhiyu\Documents\Innovation\Programming\VSCodeProjects\MarketMonitor\output |
+| Organized output folder | ✓ [Your Work Folder]\MarketMonitor\output |
 | Customizable banks | ✓ 16+ available |
 | Customizable keywords | ✓ Fully editable |
 | No API keys required | ✓ Works with free sources |
